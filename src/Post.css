@@ -1,0 +1,53 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid lightgreen;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.post:hover {
+    border: 2px solid olive;
+
+}
+
+.post_info {
+    display: flex;
+    align-items: center;
+}
+
+.post_info > h5 {
+    color:yellowgreen;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.post_info > h5:hover {
+    text-decoration: underline;
+}
+
+.post_info > small {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.post_body {
+    display: flex;
+    flex-direction: column;
+}
+
+.post_body > .post_question {
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+}
+
+
+

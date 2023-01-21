@@ -1,5 +1,4 @@
 # quora-clone
-<<<<<<< HEAD
 리액트를 사용한 quora-clone-coding
 - 2023.01.21 클론코딩 시작!(4일완성 목표!)
 - 리덕스템플릿을 한 리액트 설치
@@ -23,4 +22,18 @@
 
 # index.css
 1. 전체의 css를 담당함
-2. 
+2. 전체 마진 수정 * {}
+
+# 콤포넌트 생성
+1. Quora 생성완료
+2. Navbr 생성
+   - navbar.jss
+   - navbar.css
+
+
+# Navbar
+1. 마테리얼Ui 설치
+   - npm install @material-ui/
+2. 마테리얼 icon 적용
+   - import {} from '@material-ui/core,icons 등'
+   - 적용 : 다이브 안에 <Home/> 등

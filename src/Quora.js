@@ -4,7 +4,7 @@ import './Quora.css'
 
 function Quora(){
     return(
-        <div>
+        <div className="Quora">
             <h1>안녕!</h1>
 
         </div>

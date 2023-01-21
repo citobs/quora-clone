@@ -10,6 +10,12 @@
     z-index: 999;
     box-shadow: 0 5px 8px -9px rgb(0,0,0,0.5);
 }
+q.Header_log {
+    margin-right: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-left: 15px;
+}
 
 .qHeader_icons {
     display: flex;

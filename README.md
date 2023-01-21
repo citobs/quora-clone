@@ -44,3 +44,13 @@
    - import 변수명 from 이미지폴더
    - 사용법 : img src = {변수명}, alt=""
  5. navbar 최종완성
+
+# Sidebar 작업시작
+ - Sidebar.js
+ - Sidebar.css
+  
+# Feed 작업 시작
+ - feed.js
+ - feed.css
+
+# Post작업시작

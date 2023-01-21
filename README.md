@@ -37,3 +37,9 @@
 2. 마테리얼 icon 적용
    - import {} from '@material-ui/core,icons 등'
    - 적용 : 다이브 안에 <Home/> 등
+3. 리액트모델 생성 및 적용
+   - avatar, language, button 등
+
+4. 리액트 이미지 입력시 컴포넌트처럼 불러와야함 (조심)
+   - import 변수명 from 이미지폴더
+   - 사용법 : img src = {변수명}, alt=""

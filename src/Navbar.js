@@ -1,16 +1,18 @@
 import React from 'react';
 import './Navbar.css';
-import {AssignmentIndOutlined, BorderAllRounded, Home, NotificationImportantOutlined, PeopleOutlineOutlined, Search} from '@material-ui/icons';
-import { Avatar } from '@material-ui/core';
+import {AssignmentIndOutlined, BorderAllRounded, Home, Language, NotificationImportantOutlined, PeopleOutlineOutlined, Search} from '@material-ui/icons';
+import { Avatar, Button } from '@material-ui/core';
+import logo from './img/quora.jpg';
+
 
 
 
 function Navbar(){
     return(
-        <div className='Navbar'>
-            
+        <div className='navbar'>
             <div className='qHeader_logo'>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Quora_logo_2015.svg" alt=""/>
+             <img src={logo} width="200px" alt="logo"/>
+             
 
             </div>
             <div className='qHeader_icons'>
@@ -38,11 +40,15 @@ function Navbar(){
 
             </div>
             <div className='qHeader_Rem'>
-                <dvi className='qHeader_avatar'>
+                <div className='qHeader_avatar'>
                     <Avatar/>
+                </div>
+                    <Language/>
+                    <Button>질문하기</Button>
 
 
-                </dvi>
+
+                
 
             </div>
         </div>

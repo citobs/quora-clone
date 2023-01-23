@@ -54,3 +54,7 @@
  - feed.css
 
 # Post작업시작
+ - post.js
+ - post.css
+
+# widget 작업시작

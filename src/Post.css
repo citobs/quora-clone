@@ -49,5 +49,81 @@
     display: flex;
 }
 
+.post_body > .post_question > p:hover {
+    text-decoration: underline;
+}
 
+.post_body > img {
+    object-fit: contain;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.post_question > .post_btnAnswer {
+    margin-left: auto;
+    outline: none;
+    border: none;
+    background-color: lightgoldenrodyellow;
+    color:yellowgreen;
+    border-radius: 10px;
+    padding:10px;
+}
+
+.post_question > .post_btnAnswer:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.post_footerAction {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 33px;
+    padding:5px;
+    background-color: lightgoldenrodyellow;
+    align-items: center;
+}
+
+.post_footerAction > .MuiSvgIcon-root {
+    margin-right: 40px;
+    cursor: pointer;
+    color: black;
+}
+
+.post_footer{
+    display: flex;
+    align-items: center;
+    margin-top:10px;
+}
+
+.post_footer > .MuiSvgIcon-root {
+    color:black;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+
+.post_footerAction > .MuiSvgIcon-root:hover {
+    cursor: pointer;
+    color:yellow;
+    background-color: darkgray;
+}
+
+
+
+.post_footerRight {
+    margin-left: auto;
+}
+
+.post_footerRight > .MuiSvgIcon-root {
+    cursor: pointer;
+    margin-left: 30px;
+    color: black;
+}
+.post_footerRight >.MuiSvgIcon-root:hover {
+    cursor: pointer;
+    color: yellow;
+    background-color: darkgray;
+}
 

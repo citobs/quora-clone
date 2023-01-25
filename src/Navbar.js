@@ -12,6 +12,8 @@ import {useSelector} from "react-redux";
 import {selectUser} from "./features/userSlice";
 import db, {auth} from "./firebase";
 import Modal from 'react-modal';
+
+//firebase와 firestore 임포트 방식변화 주의!
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
@@ -41,9 +43,7 @@ function Navbar() {
             question: input,
             imageUrl: inputUrl,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-            // timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-        
-            // timestamp:firebase.firestore.FieldValue.serverTimestamp(),
+            
             user: user,
         });
 
@@ -68,7 +68,7 @@ function Navbar() {
             <div className="qHeader_icons">
 
                 <div className="qHeader_icon">
-                    <Home/>
+                    <Home />
                 </div>
                 <div className="qHeader_icon">
                     <BorderAllRounded/>

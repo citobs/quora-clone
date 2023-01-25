@@ -1,3 +1,9 @@
+a {
+text-decoration: none;
+text-decoration-color: none;
+}
+
+
 .post {
     display: flex;
     flex-direction: column;
@@ -192,7 +198,8 @@
     display: flex;
     align-items: center;
     margin-right: -20px;
-    margin-top: 0;
+    margin-top: 0px;
+    margin-bottom: 100px;
     border-top: 1px solid lightgray;
 }
 

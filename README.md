@@ -58,3 +58,20 @@
  - post.css
 
 # widget 작업시작
+ - widget.js
+ - widgetoptions.js
+ - widgetoptions.css
+ - widget.css
+
+# Redux-toolkit을 사용한 리덕스 작업
+ - userslice, questionSlice
+ - 세가지는 기본변수
+   - initialstate,name,reducer
+  
+# firbase 연동시 바뀐점 주의(버전업에따른)
+ - 세가지를 동시에 임포트 해줘야 db입력이됨
+ - 특히 timestamp 적용시 필요
+
+# 최종 완성
+- 2023.01.26 완성 (예상보다 2틀더씀)
+- 제작기간 2023.01.21~2023.01.26(02:09분)

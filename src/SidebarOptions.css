@@ -4,6 +4,12 @@
 
 
 }
+.sidebarOption2 {
+    margin-bottom:40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
 
 .sidebarOption {
     display: flex;
@@ -18,14 +24,15 @@
 }
 
 .sidebarOption > img {
-    height: 30px;
+    height: 150px;
+    width: 150px;
     margin-left: 10px;
     border-radius: 5px;
 }
 
 .sidebarOption > p {
     color: black;
-    font-weight: 400;
+    font-weight: bold;
     margin-left: 10px;
 }
 

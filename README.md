@@ -78,3 +78,4 @@
 
 # firebase 배포완료
 - 배포주소 : https://quora-clone-edd20.firebaseapp.com/)
+- firefox에 최적화 되어있음 / chrome에서 비율깨질시 firefox사용 

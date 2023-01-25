@@ -20,7 +20,8 @@
 .login_logo {
     display: flex;
     justify-content: center;
-    height: 30vh;
+    height: 35vh;
+    
 }
 
 .login_desc {

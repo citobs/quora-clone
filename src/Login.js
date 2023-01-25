@@ -49,7 +49,7 @@ function Login() {
         <div className="login">
             <div className="login_container">
                 <div className="login_logo">
-                    <img src='http://drive.google.com/uc?export=view&id=1sT8tXdYd9G_-vXi8SVhWWv72eWHFNHNi' alt=""/>
+                    <img src='http://drive.google.com/uc?export=view&id=1sT8tXdYd9G_-vXi8SVhWWv72eWHFNHNi' width="300px" height="300px" alt="cit로고" />
 
                 </div>
                 <div className="login_desc">

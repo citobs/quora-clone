@@ -12,7 +12,16 @@ import {useSelector} from "react-redux";
 import {selectUser} from "./features/userSlice";
 import db, {auth} from "./firebase";
 import Modal from 'react-modal';
-import firebase from "./firebase";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
+
+
+
+
+
+
 
 
 function Navbar() {
@@ -21,16 +30,24 @@ function Navbar() {
     const [openModal, setOpenModal] = useState(false);
     const [input, setInput] = useState("");
     const [inputUrl, setInputUrl] = useState("");
+    // const questions = firebase.firestore.collection('questions');
 
     const handleQuestion = (e) => {
         e.preventDefault();
         setOpenModal(false)
+
+        //firebase db(firestore) 연동(db에 기록)
         db.collection("questions").add({
             question: input,
             imageUrl: inputUrl,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            // timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        
+            // timestamp:firebase.firestore.FieldValue.serverTimestamp(),
             user: user,
         });
+
+        //입력후 초기화 code!
 
         setInput("");
         setInputUrl("");
@@ -43,7 +60,7 @@ function Navbar() {
 
             <div className="qHeader_logo">
                 <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Quora_logo_2015.svg/2880px-Quora_logo_2015.svg.png"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Quora_logo_2015.svg/2880px-Quora_logo_2015.svg.png" width='200px'
                     alt=""/>
 
             </div>
@@ -116,11 +133,11 @@ function Navbar() {
                     </div>
 
                     <div className="modal_Field">
-                        <Input type="text" placeholder="6하 원칙으로 질문을 작성하세요" required value={input} onChange={(e) => setInput(e.target.value)}/>
+                        <Input type="text" placeholder="궁금하신 내용을 작성해주세요! :)" required value={input} onChange={(e) => setInput(e.target.value)}/>
 
                         <div className="modal_fieldLink">
                             <Link/>
-                            <Input type="text" placeholder="url 링크만을 작성해 주세요" value={inputUrl} onChange={(e) => setInputUrl(e.target.value)}/>
+                            <Input type="text" placeholder="url링크만 작성" value={inputUrl} onChange={(e) => setInputUrl(e.target.value)}/>
 
                         </div>
 

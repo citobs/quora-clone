@@ -12,12 +12,16 @@ function Login() {
 
         console.log(auth)
     }
+    
 
     const handleLogin =(e) => {
+        // 새로고침방지
         e.preventDefault();
 
+        //파이어베이스 서버 접속
+
         auth.signInWithEmailAndPassword(email, password).then(
-            (auth) => {
+            (auth) => { 
                 console.log(auth);
             }).catch((e) => alert(e.message))
 
@@ -25,6 +29,7 @@ function Login() {
         setPassword("");
     }
 
+    // new user 등록
     const handleRegister = (e) => {
         e.preventDefault();
 

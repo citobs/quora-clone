@@ -1,11 +1,62 @@
-import { Avatar } from '@material-ui/core';
-import { ArrowDownwardOutlined, ArrowUpwardOutlined, ChatBubbleOutlineOutlined, MoreHorizOutlined, RepeatOneOutlined, ShareOutlined } from '@material-ui/icons';
-import React from 'react';
-import './Post.css';
-import Modal from 'react-modal';
+import React, {useEffect, useState} from 'react';
+import './Post.css'
+import {Avatar, Input} from "@material-ui/core";
+import {
+    ArrowDownwardOutlined,
+    ArrowUpwardOutlined,
+    ChatBubbleOutlineOutlined, ExpandMore, Link, MoreHorizOutlined, PeopleAltOutlined,
+    RepeatOneOutlined, ShareOutlined
+} from "@material-ui/icons";
+import Modal from "react-modal";
+import {useDispatch, useSelector} from "react-redux";
+import {selectQuestionId, selectQuestionName, setQuestionInfo} from "./features/questionSlice";
+import {selectUser} from "./features/userSlice";
+import firebase from "./firebase";
+import db from "./firebase";
+Modal.setAppElement("#root");
 
 function Post() {
+function Post( {key, Id, image, question, quoraUser }) {
 
+    const [openModal, setOpenModal] = useState(false);
+    const [answer, setAnswer] = useState("");
+    const dispatch = useDispatch();
+    const user = useSelector(selectUser);
+    const questionId = useSelector(selectQuestionId);
+    const questionName = useSelector(selectQuestionName);
+const [getAnswer, setGetAnswer] = useState([]);
+
+
+    const handleAnswer = (e) => {
+        e.preventDefault();
+
+        if (questionId){
+            db.collection('questions').doc(questionId).collection('answer').add({
+                questionId: questionId,
+                // timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    answer: answer,
+                    user: user,
+                })
+
+
+            console.log(questionId, questionName)
+            setAnswer("")
+            setOpenModal(false)
+        }
+    }
+
+
+    useEffect(() => {
+        if (questionId) {
+            db.collection('questions').doc(questionId).collection('answer').orderBy("desc")
+                .onSnapshot((snapshot =>
+                    setGetAnswer(
+                        snapshot.docs.map((doc) =>
+                            ({id: doc.id, answers: doc.data()}))
+                    )))
+        }
+    },[questionId])
+}
 
 
     return (

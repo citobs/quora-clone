@@ -10,10 +10,14 @@ function App() {
     const user = useSelector(selectUser);
     const dispatch = useDispatch();
 
+  //useeffect는 간단히 이야기하면 동기화!
+
     useEffect( () => {
         auth.onAuthStateChanged((authUser) => {
             if (authUser){
                 dispatch(login({
+
+                  //payload 정보:user에 관한것
 
                     uid: authUser.uid,
                     photo: authUser.photoURL,

@@ -79,3 +79,8 @@
 # firebase 배포완료
 - 배포주소 : https://quora-clone-edd20.firebaseapp.com/)
 - firefox에 최적화 되어있음 / chrome에서 비율깨질시 firefox사용 
+
+# 깃허브 clone 후 적용방법
+ - *-lock.json file 삭제후 터미널창에서 npm install
+ - fiebase 버전연동 문제로 새로 설치 
+   - 설치법(강제설치) : npm i firebase --force
